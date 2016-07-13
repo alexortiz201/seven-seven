@@ -1,9 +1,9 @@
-def hello(name, times)
+def hello(options={})
     $i = 0
-    while $i < times do
-        puts %Q{Hello #{name} (count #{$i + 1})}
+    while $i < options[:times] do
+        puts %Q{Hello #{options[:name]} (count #{$i + 1})}
         $i += 1
     end
 end
 
-hello('Alex', 5)
+hello(:name =>'Alex', :times => 5)
