@@ -1,7 +1,7 @@
 module FileSystemHelpers
     def get_file_content(file_path)
         # use read if file is not too long
-        content = File.readlines file_path
+        return File.readlines file_path
         # content.close
     end
 end
