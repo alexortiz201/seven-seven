@@ -19,5 +19,15 @@ nthIter := method(num,
     sum
   )
 )
-
 nthIter(6) println
+
+
+# change return to 0 if denominator is 0
+# augment previous divide
+prevDivide := Number getSlot("/")
+
+# override Number's older divide
+Number / := method( num, if( num == 0, 0, prevDivide(num)) )
+
+
+
